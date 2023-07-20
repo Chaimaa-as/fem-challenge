@@ -1,38 +1,40 @@
 :root {
- --clr-accent-400: hsl(12, 88%, 59%);
- --clr-accent-100: hsl(13, 100%, 96%);
+  --clr-accent-500: hsl(12, 60%, 45%);
+  --clr-accent-400: hsl(12, 88%, 59%);
+  --clr-accent-300: hsl(12, 88%, 75%);
+  --clr-accent-100: hsl(13, 100%, 96%);
 
- --clr-primary-400: hsl(228, 39%, 23%);
+  --clr-primary-400: hsl(228, 39%, 23%);
 
- --clr-neutral-900: hsl(232, 12%, 13%);
- --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-900: hsl(232, 12%, 13%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
 
- --ff-primary: 'Be Vietnam Pro', sans-serif;
+  --ff-primary: "Be Vietnam Pro", sans-serif;
 
- --ff-body: var(--ff-primary);
- --ff-heading: var(--ff-primary);
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
 
- --fw-regular:400;
- --fw-semi-bold:500;
- --fw-bold:700;
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
 
- --fs-300: 0.8125rem;
- --fs-400: 0.875rem;
- --fs-500: 0.9375rem;
- --fs-600: 1rem;
- --fs-700: 1.875rem;
- --fs-800: 2.5rem;
- --fs-900: 3.5rem;
+  --fs-300: 0.8125rem;
+  --fs-400: 0.875rem;
+  --fs-500: 0.9375rem;
+  --fs-600: 1rem;
+  --fs-700: 1.875rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
 
- --fs-body: var(--fs-400);
- --fs-primary-heading:var(--fs-800);
- --fs-secondary-heading:var(--fs-700);
- --fs-nav: var(--fs-500);
- --fs-button: var(--fs-300); 
- /* we don't have to change that in the media query*/
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-300);
+  /* we don't have to change that in the media query*/
 }
 
-@media (min-width: 50em){
+@media (min-width: 50em) {
   :root {
     --fs-body: var(--fs-500);
     --fs-primary-heading: var(--fs-900);
@@ -40,7 +42,6 @@
     --fs-nav: var(--fs-300);
   }
 }
-
 
 /* / https://piccalil.li/blog/a-modern-css-reset */
 
@@ -52,7 +53,6 @@
   box-sizing: border-box;
 }
 
-
 /* kp : now i like to remove all the margins 
 which i like doing */
 /* he prefers to : */
@@ -61,7 +61,6 @@ which i like doing */
   padding: 0;
   font: inherit;
 }
-
 
 /* he keeps this */
 /* Remove list styles on ul, ol elements 
@@ -78,9 +77,9 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-html, 
+html,
 body {
-  height : 100%
+  height: 100%;
 }
 
 /* this can bring some issues, 
@@ -124,25 +123,23 @@ not to see them */
   }
 }
 
-
 /* Utility classes */
 
 .text-primary-400 {
-  color: var(--clr-primary-400)
+  color: var(--clr-primary-400);
 }
 .text-accent-400 {
-  color: var(--clr-primary-400)
+  color: var(--clr-accent-400);
 }
 .text-accent-100 {
-  color: var(--clr-primary-100)
+  color: var(--clr-accent-100);
 }
 .text-neutral-100 {
-  color: var(--clr-primary-100)
+  color: var(--clr-neutral-100);
 }
 .text-neutral-900 {
-  color: var(--clr-primary-100)
+  color: var(--clr-neutral-900);
 }
-
 
 .bg-primary-400 {
   background-color: var(--clr-primary-400);
@@ -160,21 +157,33 @@ not to see them */
   background-color: var(--clr-primary-900);
 }
 
-
-
-.fw-bold { font-weight: var(--fw-bold); }
-.fw-semi-bold { font-weight: var(--fw-semi-bold); }
-.fw-regular { font-weight: var(--fw-regular); }
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
 
 .fs-primary-heading {
-  font-size: var(--fs-primary-heading)
+  font-size: var(--fs-primary-heading);
 }
 
 .fs-secondary-heading {
-  font-size: var(--fs-secondary-heading)
+  font-size: var(--fs-secondary-heading);
 }
 
-.fs-300 {font-size: var(--fs-300)}
-.fs-400 {font-size: var(--fs-400)}
-.fs-500 {font-size: var(--fs-500)}
-.fs-600 {font-size: var(--fs-600)}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
