@@ -7,6 +7,7 @@
   --clr-primary-400: hsl(228, 39%, 23%);
 
   --clr-neutral-900: hsl(232, 12%, 13%);
+  --clr-neutral-200: hsl(0 0% 97%);
   --clr-neutral-100: hsl(0 0% 100%);
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
@@ -43,7 +44,7 @@
   --size-900: 5rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   :root {
     --fs-body: var(--fs-500);
     --fs-primary-heading: var(--fs-900);
@@ -210,15 +211,18 @@ p[data-width="wide"] {
   color: var(--clr-accent-400);
 }
 
-@media (max-width: 50em) {
+@media (max-width: 47em) {
+  .primary-header[data-overlay]{
+    position: relative;
+    z-index: 999;
+  }
   .primary-navigation {
     display: none;
-
     position: fixed;
     padding: var(--size-700);
     inset: 7rem var(--size-400) auto;
     max-width: 25rem;
-    margin-left: auto;
+    margin-inline: auto;
     background: var(--clr-neutral-100);
     border-radius: var(--size-100);
     box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
@@ -227,6 +231,7 @@ p[data-width="wide"] {
   .primary-header[data-overlay]::before {
     content: "";
     position: fixed;
+
     inset: 0;
     /* height: 100vh; */
     background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
@@ -243,6 +248,8 @@ p[data-width="wide"] {
     display: block;
   }
 
+
+
   .mobile-nav-toggle {
     display: block;
     position: fixed;
@@ -252,10 +259,20 @@ p[data-width="wide"] {
     background: transparent;
     border: 0;
     padding: 0.5em;
+    width: 1.75rem;
+    aspect-ratio: 1;
+    background-image: url("images/icon-hamburger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"]  {
+    background-image: url("images/icon-close.svg");
   }
 
   .mobile-nav-toggle .icon-close {
-    display: none;
+    display:none;
   }
 }
 
@@ -305,7 +322,7 @@ input:where([type="text"], [type="email"], ) {
   padding: var(--size-300) var(--size-400);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .primary-footer-wrapper {
     grid-template-areas: "logo-social nav form";
   }
@@ -317,7 +334,7 @@ input:where([type="text"], [type="email"], ) {
   }
 }
 
-@media (max-width: 50em) {
+@media (max-width: 47em) {
   .primary-footer-wrapper > * {
     margin-inline: auto;
   }
@@ -364,7 +381,7 @@ input:where([type="text"], [type="email"], ) {
   text-align: center;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .cta {
     text-align: left;
   }
@@ -482,7 +499,7 @@ input:where([type="text"], [type="email"], ) {
   }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .slider > * {
     width: 35%;
   }
@@ -528,6 +545,38 @@ input:where([type="text"], [type="email"], ) {
   background: var(--clr-accent-400);
 }
 
+/* blobs*/
+
+@media (max-width:50em){
+  .hero__image{
+    order:-1;
+  }
+}
+
+.hero__image::before{
+  content:"";
+  position: absolute;
+  z-index:-1;
+  right:0;
+  left:0;
+  top:0;
+  width:85%;
+
+  max-height:70vh;
+  max-height:70dvh;
+  /* dynamic viewport heightit will call either one that's working */
+
+  aspect-ratio: 1 / 1.2;
+  background-image: url("images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+@media (max-width:50em){
+  .hero__image::before{
+    width:45%;
+  }
+}
 
 /* Utility classes */
 
@@ -556,7 +605,7 @@ input:where([type="text"], [type="email"], ) {
   gap: 1rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .even-columns {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -571,7 +620,7 @@ input:where([type="text"], [type="email"], ) {
   justify-self: end;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .justify-self-end-md {
     justify-self: end;
   }
@@ -589,7 +638,7 @@ input:where([type="text"], [type="email"], ) {
   margin-inline: auto;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 47em) {
   .text-center-sm-only {
     text-align: center;
   }
@@ -674,11 +723,14 @@ input:where([type="text"], [type="email"], ) {
   margin-block-end: var(--size-700);
 }
 
+.mx-auto{
+  margin-inline:auto;
+}
 .display-sm-none {
   display: none;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .display-md-inline-flex {
     display: inline-flex;
   }

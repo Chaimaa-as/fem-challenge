@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css"
+      href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css"
     />
     <script
       src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"
@@ -26,13 +26,13 @@
     <header class="primary-header">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#"><img src="images/logo.svg" alt="Manage" /></a>
+          <a href="#"><img src="images/logo.svg" alt="Manage"/></a>
           <button
             class="mobile-nav-toggle"
             aria-controls="primary-navigation"
             aria-expanded="false"
           >
-            <img
+            <!-- <img
               class="icon-hamburger"
               src="images/icon-hamburger.svg"
               alt=""
@@ -43,7 +43,7 @@
               src="images/icon-close.svg"
               alt=""
               aria-hidden="true"
-            />
+            /> -->
             <span class="visually-hidden">Menu</span>
           </button>
           <nav class="primary-navigation" id="primary-navigation">
@@ -63,7 +63,7 @@
     </header>
 
     <main>
-      <section class="padding-block-900">
+      <section class="hero | text-center-sm-only padding-block-900">
         <div class="container">
           <div class="even-columns">
             <div class="flow">
@@ -76,8 +76,8 @@
               </p>
               <button class="button">Get Started</button>
             </div>
-            <div>
-              <img src="images/illustration-intro.svg" alt="" />
+            <div class="hero__image">
+              <img class="mx-auto" src="images/illustration-intro.svg" alt="" />
             </div>
           </div>
         </div>
@@ -234,10 +234,9 @@
               <li>
                 <a aria-label="facebook" href="#">
                   <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-facebook"
-                    ></use></svg
-                ></a>
+                    <use xlink:href="images/social-icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
               </li>
               <li>
                 <a aria-label="youtube" href="#">
