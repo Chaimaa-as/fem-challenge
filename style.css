@@ -83,7 +83,8 @@ html:focus-within {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  overflow-x:hidden;
 }
 
 /* Set core body defaults */
@@ -248,8 +249,6 @@ p[data-width="wide"] {
     display: block;
   }
 
-
-
   .mobile-nav-toggle {
     display: block;
     position: fixed;
@@ -259,7 +258,7 @@ p[data-width="wide"] {
     background: transparent;
     border: 0;
     padding: 0.5em;
-    width: 1.75rem;
+    width: 1.65rem;
     aspect-ratio: 1;
     background-image: url("images/icon-hamburger.svg");
     background-size: contain;
@@ -271,9 +270,7 @@ p[data-width="wide"] {
     background-image: url("images/icon-close.svg");
   }
 
-  .mobile-nav-toggle .icon-close {
-    display:none;
-  }
+
 }
 
 /* footer */
@@ -545,7 +542,7 @@ input:where([type="text"], [type="email"], ) {
   background: var(--clr-accent-400);
 }
 
-/* blobs*/
+/*hero /BLOBS*/
 
 @media (max-width:50em){
   .hero__image{
@@ -572,9 +569,36 @@ input:where([type="text"], [type="email"], ) {
   background-position: bottom left;
 }
 
-@media (max-width:50em){
+@media (max-width:47em){
   .hero__image::before{
     width:45%;
+  }
+}
+
+/* sales-points */
+.sales-points__blob{
+  position: relative;
+}
+
+.sales-points__blob::before {
+  content:url("images/bg-tablet-pattern.svg");
+  zoom:40%;
+  position: absolute;
+  z-index:-1;
+  left:70%;
+  bottom:120%;
+  /* it's easier with a top on an absolute */
+  width:100px;
+}
+
+@media (min-width:47em) {
+  .sales-points__blob::before{
+    zoom:70%;
+    z-index:-1;
+    left:-500px;
+    top:42%;
+    /* it's easier with a top on an absolute */
+    width:100px;
   }
 }
 
